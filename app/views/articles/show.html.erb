@@ -8,6 +8,7 @@
 </ul>
 
 <h2><%= "Comments" if @article.comments.exists? %></h2>
+<p><%= "There are #{@article.comments.count} comments on this article"%></p>
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
