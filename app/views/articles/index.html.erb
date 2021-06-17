@@ -1,14 +1,39 @@
 <h1>Articles</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
+<hr>
 
+Our blog has <%= @articles.count %> articles and counting!
+
+<hr id="underline">
+
+<br>
+
+<div class="links">
 <ul>
-  <% @articles.each do |article| %>
-    <li>
-        <%= link_to article.title, article %>
-      </a>
-    </li>
-  <% end %>
+<li>
+  <%= link_to "All Articles", root_path %> |
+</li>
+<li>
+  <%= link_to "New Article", new_article_path %>
+</li>
 </ul>
+</div>
 
-<%= link_to "New Article", new_article_path %>
+<hr>
+
+<br>
+
+<div class="container">
+  <% @articles.each do |article| %>
+    <div class="article">
+        <h2><%= link_to article.title, article %></h2>
+        <br>
+        <%= article.body %>
+        <br><br>
+        <%= '<hr>'.html_safe if article.id <= @articles.count %>
+        <br>
+      </a>
+    </div>
+  <% end %>
+</div>
+
