@@ -6,6 +6,20 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+a:link, a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border: 2px black;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: rgba(80, 80, 80, 0.493);
+  box-shadow: 0 0 10px 5px rgba(80, 80, 80, 0.493);
+}
+
 hr {
   width: 30%;
   border: 0;
@@ -21,27 +35,59 @@ h2 {
   font-size: 1.25em;
 }
 
-#underline {
+.underline {
   width: 40%;
+  margin-bottom: 1em;
 }
 
 .links *{
-  margin: auto;
-  padding-right: 10px;
-  width: 30%;
+  width: 10%;
   display: inline;
+  padding: 0.5em;
+  font-weight: bold;
 }
 
- .article {
-   width: 30%;
-   margin: auto;
- }
+.nav__underline {
+  margin-top: 1em;
+}
 
- input[type=text] {
+.article {
   width: 30%;
- }
+  margin: auto;
+}
 
- textarea {
-   width: 30%;
-   height: 20em;
- }
+input[type=text] {
+width: 30%;
+}
+
+textarea {
+  width: 30%;
+  height: 20em;
+}
+
+#comments {
+  width: 30%;
+  margin: auto;
+  text-align: left;
+  padding: 1em 0 1em 0;
+}
+
+.button__delete--comment {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .links *{
+    width: auto;
+  }
+
+  hr, .underline {
+    width: 80%;
+  }
+
+  .article, input[type=text], #comments, textarea {
+    width: 90%;
+  }
+
+
+}

@@ -15,10 +15,14 @@
 <div class="links">
 <ul>
   <li><%= link_to "All Articles", root_path %></li>
+  <li> | </li>
   <li><%= link_to "Edit" , edit_article_path(@article) %></li>
+  <li> | </li>
   <li><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
 </ul>
 </div>
+
+<hr class="nav__underline">
 
 <h2><%= "Comments" if @article.comments.exists? %></h2>
 
