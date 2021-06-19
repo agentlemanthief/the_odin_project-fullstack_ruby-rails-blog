@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   http_basic_authenticate_with name: 'nicholas', password: 'oldlongjohnson', only: :destroy
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order('updated_at desc')
   end
 
   def show

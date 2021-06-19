@@ -30,6 +30,13 @@ Our blog has <%= @articles.count %> articles and counting!
           <br>
           <%= article.body %>
           <br><br>
+          <% if article.created_at == article.updated_at %>
+            Date Created: <%= article.created_at.strftime('%d %B %Y') %>
+          <% else %>
+            Date Modified: <%= article.updated_at.strftime('%d %B %Y') %>
+          <% end %>
+          <br>
+          <br><br>
           <%= '<hr>'.html_safe if article.id <= @articles.count %>
           <br>
         <% end %>
