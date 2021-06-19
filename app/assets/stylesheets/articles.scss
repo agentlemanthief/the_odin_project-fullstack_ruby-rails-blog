@@ -74,9 +74,14 @@ textarea {
 
 .button__delete--comment {
   text-align: center;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    font-size: 90%;
+  }
+
   .links *{
     width: auto;
   }
@@ -88,6 +93,10 @@ textarea {
   .article, input[type=text], #comments, textarea {
     width: 90%;
   }
+}
 
-
+@media only screen and (max-width: 568px) {
+  body {
+    font-size: 70%;
+  }
 }
