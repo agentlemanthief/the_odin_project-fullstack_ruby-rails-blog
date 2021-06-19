@@ -31,9 +31,9 @@ Our blog has <%= @articles.count %> articles and counting!
           <%= article.body %>
           <br><br>
           <% if article.created_at == article.updated_at %>
-            Date Created: <%= article.created_at.strftime('%d %B %Y') %>
+            <em>Date Created: <%= article.created_at.strftime('%d %B %Y') %></em>
           <% else %>
-            Date Modified: <%= article.updated_at.strftime('%d %B %Y') %>
+            <em>Date Modified: <%= article.updated_at.strftime('%d %B %Y') %></em>
           <% end %>
           <br>
           <br><br>
