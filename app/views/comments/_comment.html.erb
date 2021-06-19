@@ -12,7 +12,9 @@
     <%= comment.body %>
   </p>
 
+  <hr class="hr__deletecomment">
   <p class="button__delete--comment">
     <%= link_to 'Delete Comment', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
+  <hr class="hr__deletecomment">
 </div>

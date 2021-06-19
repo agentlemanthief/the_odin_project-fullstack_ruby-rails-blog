@@ -23,6 +23,7 @@ Our blog has <%= @articles.count %> articles and counting!
 <br>
 
 <div class="articles__container">
+  <% count = 0 %>
   <% @articles.each do |article| %>
       <div class="article">
         <%= link_to article do %>
@@ -30,16 +31,19 @@ Our blog has <%= @articles.count %> articles and counting!
           <br>
           <%= article.body %>
           <br><br>
+          <hr class="hr__datecreated">
           <% if article.created_at == article.updated_at %>
             <em>Date Created: <%= article.created_at.strftime('%d %B %Y') %></em>
           <% else %>
             <em>Date Modified: <%= article.updated_at.strftime('%d %B %Y') %></em>
           <% end %>
+          <hr class="hr__datecreated">
+          <% count += 1 %>
+        <% end %>
           <br>
           <br><br>
-          <%= '<hr>'.html_safe if article.id <= @articles.count %>
+          <%= '<hr>'.html_safe if count < @articles.count %>
           <br>
-        <% end %>
       </div>
   <% end %>
 </div>
