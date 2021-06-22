@@ -1,4 +1,4 @@
-The Odin Project's Full Stack Ruby on Rails micro-reddit project
+The Odin Project's Full Stack Ruby on Rails blog app project
 
 # Assignment
 
