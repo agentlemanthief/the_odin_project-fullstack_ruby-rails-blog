@@ -2,7 +2,7 @@
   <div class="div__commentmessage-failure">
     <p class="comment-message"><%= flash[:notice] %></p>
   </div>
-<% else %>
+<% elsif flash[:notice] == 'Thank you for your comment!' %>
   <div class="div__commentmessage-success">
     <p class="comment-message"><%= flash[:notice] %></p>
   </div>
