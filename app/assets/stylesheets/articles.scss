@@ -94,6 +94,36 @@ textarea {
   position: absolute;
 }
 
+.div__commentmessage-success {
+  margin: auto;
+  width: 50%;
+  height: 2em;
+  background-color: rgb(104, 194, 30);
+  border: 0.5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.div__commentmessage-failure {
+  margin: auto;
+  width: 50%;
+  height: 2em;
+  background-color: rgb(194, 41, 30);
+  border: 0.5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.comment-message {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 @media only screen and (max-width: 600px) {
   body {

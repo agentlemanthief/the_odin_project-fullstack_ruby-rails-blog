@@ -3,7 +3,13 @@ class CommentsController < ApplicationController
 
   def create
     @article = Article.find(params[:article_id])
-    @comment = @article.comments.create(comment_params)
+    # @comment = @article.comments.create(comment_params)
+    @comment = @article.comments.new(comment_params)
+    if @comment.save
+      flash[:notice] = 'Thank you for your comment!'
+    else
+      flash[:notice] = 'Your comment could not be saved!'
+    end
     redirect_to article_path(@article)
   end
 

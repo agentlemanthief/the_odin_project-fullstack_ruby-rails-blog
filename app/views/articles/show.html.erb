@@ -1,3 +1,13 @@
+<% if flash[:notice] == 'Your comment could not be saved!' %>
+  <div class="div__commentmessage-failure">
+    <p class="comment-message"><%= flash[:notice] %></p>
+  </div>
+<% else %>
+  <div class="div__commentmessage-success">
+    <p class="comment-message"><%= flash[:notice] %></p>
+  </div>
+<% end %>
+
 <h1><%= @article.title %></h1>
 
 <br>
@@ -25,12 +35,11 @@
 
 <h2><%= "Comments" if @article.comments.exists? %></h2>
 
-<br>
-
 <p><%= "There are #{@article.comments.count} comments on this article"%></p>
 <%= render @article.comments %>
 
 <hr>
+<br><br>
 
 <h2>Add a comment:</h2>
 
