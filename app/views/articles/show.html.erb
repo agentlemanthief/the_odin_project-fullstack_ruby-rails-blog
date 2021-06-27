@@ -39,7 +39,7 @@
 
 <h2><%= "Comments" if @article.comments.exists? %></h2>
 
-<p><%= "There are #{@article.comments.count} comments on this article"%></p>
+<p><%= "There #{@article.comments.count < 2 ? 'is' : 'are'} #{pluralize(@article.comments.count, 'comment')} on this article"%></p>
 <%= render @article.comments %>
 
 <hr>
