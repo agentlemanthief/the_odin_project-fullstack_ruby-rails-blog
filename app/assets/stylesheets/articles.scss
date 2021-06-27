@@ -4,6 +4,7 @@
 body {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
 }
 
 a:link, a:visited {
@@ -60,11 +61,13 @@ h2 {
 
 input[type=text] {
 width: 30%;
+border: 1px solid black;
 }
 
 textarea {
   width: 30%;
   height: 20em;
+  border: 1px solid black;
 }
 
 #comments {
@@ -94,24 +97,26 @@ textarea {
   position: absolute;
 }
 
-.div__commentmessage-success {
+.div__message-success {
   margin: auto;
   width: 50%;
   height: 2em;
-  background-color: rgb(104, 194, 30);
+  background-color: #5cb85c;
   border: 0.5px solid black;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.308);
   text-align: center;
   position: relative;
 }
 
-.div__commentmessage-failure {
+.div__message-failure {
   margin: auto;
   width: 50%;
   height: 2em;
-  background-color: rgb(194, 41, 30);
+  background-color: rgba(224, 49, 34, 1);
   border: 0.5px solid black;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.308);
   text-align: center;
   position: relative;
 }
@@ -124,10 +129,9 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 568px) {
   body {
-    font-size: 90%;
+    font-size: 70%;
   }
 
   .links *{
@@ -141,10 +145,13 @@ textarea {
   .article, input[type=text], #comments, textarea {
     width: 90%;
   }
-}
 
-@media only screen and (max-width: 568px) {
-  body {
-    font-size: 70%;
+  .div__message-failure, .div__message-success {
+    width: 90%;
+  }
+
+  .comment-message {
+    position: relative;
+    text-align: center;
   }
 }

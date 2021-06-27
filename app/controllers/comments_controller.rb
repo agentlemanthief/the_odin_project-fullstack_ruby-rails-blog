@@ -6,9 +6,9 @@ class CommentsController < ApplicationController
     # @comment = @article.comments.create(comment_params)
     @comment = @article.comments.new(comment_params)
     if @comment.save
-      flash[:notice] = 'Thank you for your comment!'
+      flash[:comment_success] = 'Thank you for your comment!'
     else
-      flash[:notice] = 'Your comment could not be saved!'
+      flash[:comment_failure] = 'Your comment could not be saved!'
     end
     redirect_to article_path(@article)
   end

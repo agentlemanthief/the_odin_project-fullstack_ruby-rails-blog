@@ -20,8 +20,10 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
+      flash[:post_success] = 'Thank you for your post!'
       redirect_to @article
     else
+      flash[:post_failure] = 'Your post could not be saved!'
       render :new
     end
   end

@@ -1,10 +1,14 @@
-<% if flash[:notice] == 'Your comment could not be saved!' %>
-  <div class="div__commentmessage-failure">
-    <p class="comment-message"><%= flash[:notice] %></p>
+<% if flash[:comment_failure] %>
+  <div class="div__message-failure">
+    <p class="comment-message"><%= flash[:comment_failure] %></p>
   </div>
-<% elsif flash[:notice] == 'Thank you for your comment!' %>
-  <div class="div__commentmessage-success">
-    <p class="comment-message"><%= flash[:notice] %></p>
+<% elsif flash[:comment_success] %>
+  <div class="div__message-success">
+    <p class="comment-message"><%= flash[:comment_success] %></p>
+  </div>
+<% elsif flash[:post_success] %>
+  <div class="div__message-success">
+    <p class="comment-message"><%= flash[:post_success] %></p>
   </div>
 <% end %>
 
